@@ -1,0 +1,19 @@
+<h2>Bienvenido! {{username}}</h2>
+
+<h3>Para Chat</h3>
+<form action="/chat" method="post">
+    Username: <input type="text" name="username" value="{{username}}" readonly>
+    Message: <input type="text" name="message" id="message">
+    <input type="submit" value="SEND">
+</form>
+
+<h4>Productos disponibles</h4>
+{{#each products}}
+<div>
+    <h3>{{name}}</h3>
+    <p>Descripción: {{description}}</p>
+    <p>Precio: {{price}}</p>
+    <p>Stock: {{stock}}</p>
+    <img src="{{thumbnail}}" alt="{{description}}" width="100">
+</div>
+{{/each}}
